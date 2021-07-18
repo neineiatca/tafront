@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/tafront/static/css/main.a617e044.chunk.css",
+    "main.js": "/tafront/static/js/main.398532e2.chunk.js",
+    "main.js.map": "/tafront/static/js/main.398532e2.chunk.js.map",
+    "runtime-main.js": "/tafront/static/js/runtime-main.960ee591.js",
+    "runtime-main.js.map": "/tafront/static/js/runtime-main.960ee591.js.map",
+    "static/js/2.cf8e6fa2.chunk.js": "/tafront/static/js/2.cf8e6fa2.chunk.js",
+    "static/js/2.cf8e6fa2.chunk.js.map": "/tafront/static/js/2.cf8e6fa2.chunk.js.map",
+    "static/js/3.f9646691.chunk.js": "/tafront/static/js/3.f9646691.chunk.js",
+    "static/js/3.f9646691.chunk.js.map": "/tafront/static/js/3.f9646691.chunk.js.map",
+    "index.html": "/tafront/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/tafront/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.cf8e6fa2.chunk.js.LICENSE.txt": "/tafront/static/js/2.cf8e6fa2.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/tafront/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.960ee591.js",
+    "static/js/2.cf8e6fa2.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.398532e2.chunk.js"
+  ]
+}
