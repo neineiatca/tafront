@@ -1,10 +1,18 @@
+import { Investment } from "../model/Investment";
 import { InvestmentItem } from "./InvestmentItem/InvestmentItem";
-export const InvestmentsList = () => {
+import { InvestmentsHeader } from "./InvestmentsHeader";
+
+type Prop = {
+  investments: Investment[];
+};
+
+export const InvestmentsList = ({ investments }: Prop) => {
   return (
     <div>
-      <InvestmentItem />
-      <InvestmentItem />
-      <InvestmentItem />
+      <InvestmentsHeader style={{ height: "10vh" }} />
+      {investments.map((e) => {
+        return <InvestmentItem investment={e} style={{ height: "10vh" }} />;
+      })}
     </div>
   );
 };

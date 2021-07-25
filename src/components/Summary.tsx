@@ -1,3 +1,7 @@
-export const Summary = () => {
-    return <div>summary</div>
-}
+type Props = {
+  style: React.CSSProperties;
+};
+
+export const Summary = ({ style: style }: Props) => {
+  return <div style={style}>summary</div>;
+};
