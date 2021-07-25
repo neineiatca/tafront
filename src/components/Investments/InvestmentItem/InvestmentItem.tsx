@@ -5,11 +5,17 @@ import { PercentageBar } from "./PercentageBar";
 export const InvestmentItem = () => {
   return (
     <Flex>
-      <div style={{ width: "70%" }}>
-        <PercentageBar value={60} />
+      <div style={{ width: "20%" }}>x</div>
+      <div style={{ width: "20%" }}>Investment</div>
+      <div style={{ width: "20%" }}>
+        <PercentageBar value={99} />
       </div>
-      <div style={{ width: "30%" }}>
+      <div style={{ width: "20%" }}>Asset Class</div>
+      <div style={{ width: "20%" }}>
         <DiscreteSlider />
+      </div>
+      <div style={{ width: "20%" }}>
+        <input />
       </div>
     </Flex>
   );
