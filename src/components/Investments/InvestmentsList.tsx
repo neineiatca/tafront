@@ -1,5 +1,5 @@
 import { InvestmentItem } from "./InvestmentItem/InvestmentItem";
-export const InvestmentList = () => {
+export const InvestmentsList = () => {
   return (
     <div>
       <InvestmentItem />

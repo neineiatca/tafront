@@ -1,11 +1,10 @@
 import "./App.css";
-
-import { InvestmentList } from "./components/Investments/InvestmentList";
+import { InvestmentsList } from "./components/Investments/InvestmentsList";
 
 function App() {
   return (
     <div>
-      <InvestmentList />
+      <InvestmentsList />
     </div>
   );
 }

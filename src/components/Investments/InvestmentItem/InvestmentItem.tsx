@@ -1,6 +1,6 @@
 import { Flex } from "../../shared/Flex";
 import DiscreteSlider from "./DiscreteSlider";
-import { PercentageBar } from "./PercentageBar";
+import { PercentageBar } from "../../shared/PercentageBar";
 
 export const InvestmentItem = () => {
   return (
