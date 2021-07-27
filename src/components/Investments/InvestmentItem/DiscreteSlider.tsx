@@ -1,14 +1,18 @@
 import Slider from "@material-ui/core/Slider";
 
+type Props = {
+  defaultValue: number;
+};
+
 function valuetext(value: any) {
   return `${value}°C`;
 }
 
-export default function DiscreteSlider() {
+export default function DiscreteSlider({ defaultValue }: Props) {
   return (
     <div>
       <Slider
-        defaultValue={50}
+        defaultValue={defaultValue}
         getAriaValueText={valuetext}
         aria-labelledby="discrete-slider-small-steps"
         step={1}

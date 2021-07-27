@@ -44,10 +44,10 @@ export const InvestmentItem = ({
         <strong>{investment.assetClass}</strong>
       </VerticalCenteredBox>
       <VerticalCenteredBox style={{ width: "20%" }}>
-        <DiscreteSlider />
+        <DiscreteSlider defaultValue={investment.weight} />
       </VerticalCenteredBox>
       <VerticalCenteredBox style={{ width: "20%" }}>
-        <input />
+        <input value={investment.weight} style={{ textAlign: "center" }} />
       </VerticalCenteredBox>
     </Flex>
   );
