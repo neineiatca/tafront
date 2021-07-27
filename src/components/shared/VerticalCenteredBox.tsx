@@ -5,7 +5,7 @@ type Props = {
 
 export const VerticalCenteredBox = ({ children, style }: Props) => {
   return (
-    <div
+    <span
       style={{
         ...style,
         marginTop: "auto",
@@ -14,6 +14,6 @@ export const VerticalCenteredBox = ({ children, style }: Props) => {
       }}
     >
       {children}
-    </div>
+    </span>
   );
 };
