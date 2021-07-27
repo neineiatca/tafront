@@ -1,4 +1,5 @@
 import { Flex } from "../shared/Flex";
+import { VerticalCenteredBox } from "../shared/VerticalCenteredBox";
 
 type Props = {
   style?: React.CSSProperties;
@@ -7,12 +8,20 @@ type Props = {
 export const InvestmentsHeader = ({ style }: Props) => {
   return (
     <Flex style={style}>
-      <div style={{ width: "20%", textAlign: "center" }}>x</div>
-      <div style={{ width: "20%", textAlign: "center" }}>Investment</div>
-      <div style={{ width: "20%", textAlign: "center" }}></div>
-      <div style={{ width: "20%", textAlign: "center" }}>Asset Class</div>
-      <div style={{ width: "20%", textAlign: "center" }}></div>
-      <div style={{ width: "20%", textAlign: "center" }}></div>
+      <VerticalCenteredBox style={{ width: "20%" }} />
+      <VerticalCenteredBox
+        style={{ width: "20%", fontWeight: "bolder", fontSize: "x-large" }}
+      >
+        Investment
+      </VerticalCenteredBox>
+      <VerticalCenteredBox style={{ width: "20%" }} />
+      <VerticalCenteredBox
+        style={{ width: "20%", fontWeight: "bolder", fontSize: "x-large" }}
+      >
+        Asset Class
+      </VerticalCenteredBox>
+      <VerticalCenteredBox style={{ width: "20%" }} />
+      <VerticalCenteredBox style={{ width: "20%" }} />
     </Flex>
   );
 };
