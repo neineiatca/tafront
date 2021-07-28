@@ -34,25 +34,42 @@ function App() {
   ]);
 
   const addInvestment = () => {
-    let tmpInvestments = JSON.parse(JSON.stringify(investments))
+    let tmpInvestments = JSON.parse(JSON.stringify(investments));
     tmpInvestments.push(tmpInvestments[tmpInvestments.length - 1]);
     setInvestments(tmpInvestments);
   };
 
   const removeInvestment = (i: number) => {
-    let tmpInvestments = JSON.parse(JSON.stringify(investments))
+    let tmpInvestments = JSON.parse(JSON.stringify(investments));
     tmpInvestments.splice(i, 1);
+    setInvestments(tmpInvestments);
+  };
+
+  const updateElement = (newWeight: number, i: number) => {
+    let tmpInvestments = JSON.parse(JSON.stringify(investments));
+    tmpInvestments[i].weight = newWeight;
     setInvestments(tmpInvestments);
   };
 
   return (
     <div style={{ width: "1300px", marginLeft: "auto", marginRight: "auto" }}>
       <Header style={{ height: "10vh" }} />
-      <Summary style={{ height: "10vh" }} />
+      <Summary
+        style={{ height: "10vh" }}
+        value={Math.round(
+          investments.reduce((acc, currentObj) => {
+            return {
+              ...acc,
+              weight: acc.weight + currentObj.weight,
+            };
+          }).weight / investments.length
+        )}
+      />
       <InvestmentsList
         investments={investments}
         addInvestment={addInvestment}
         removeInvestment={removeInvestment}
+        updateElement={updateElement}
       />
     </div>
   );

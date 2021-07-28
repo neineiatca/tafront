@@ -9,6 +9,7 @@ type Props = {
   style?: React.CSSProperties;
   removeInvestment: (i: number) => void;
   index: number;
+  updateElement: (newWeight: number, i: number) => void;
 };
 
 export const InvestmentItem = ({
@@ -16,6 +17,7 @@ export const InvestmentItem = ({
   style,
   removeInvestment,
   index,
+  updateElement,
 }: Props) => {
   return (
     <Flex style={style}>
@@ -44,7 +46,11 @@ export const InvestmentItem = ({
         <strong>{investment.assetClass}</strong>
       </VerticalCenteredBox>
       <VerticalCenteredBox style={{ width: "20%" }}>
-        <DiscreteSlider defaultValue={investment.weight} />
+        <DiscreteSlider
+          defaultValue={investment.weight}
+          updateElement={updateElement}
+          index={index}
+        />
       </VerticalCenteredBox>
       <VerticalCenteredBox style={{ width: "20%" }}>
         <input value={investment.weight} style={{ textAlign: "center" }} />

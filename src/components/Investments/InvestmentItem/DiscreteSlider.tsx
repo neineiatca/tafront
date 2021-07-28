@@ -2,13 +2,19 @@ import Slider from "@material-ui/core/Slider";
 
 type Props = {
   defaultValue: number;
+  updateElement: (newWeight: number, i: number) => void;
+  index: number;
 };
 
 function valuetext(value: any) {
   return `${value}°C`;
 }
 
-export default function DiscreteSlider({ defaultValue }: Props) {
+export default function DiscreteSlider({
+  defaultValue,
+  updateElement,
+  index,
+}: Props) {
   return (
     <div>
       <Slider
@@ -20,9 +26,8 @@ export default function DiscreteSlider({ defaultValue }: Props) {
         min={1}
         max={100}
         valueLabelDisplay="auto"
-        onChange={(eee) => {
-          // for debug
-          console.log(eee);
+        onChange={(eee: any) => {
+          updateElement(parseInt(eee.target.textContent), index);
         }}
       />
     </div>
